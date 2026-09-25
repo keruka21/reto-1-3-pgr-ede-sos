@@ -1,7 +1,7 @@
 # reto-1-3-pgr-ede-sos
 Reto 1.3 (PGR, SOS, EDE)
-#MODIFICACIONES
-##1.- Calculadora diaria de CO₂ por persona
+
+## 1.- Calculadora diaria de CO₂ por persona
 Se desea implementar un programa en Java que funcione como una calculadora de huella de carbono diaria para un grupo de personas. El programa debe pedir datos a los usuarios y registrar sus actividades para calcular las emisiones de CO₂.
 Al inicio, el programa debe preguntar cuántas personas se van a registrar.
 Para cada persona se mostrará un menú con distintas actividades que pueden generar emisiones de CO₂. El menú debe repetirse hasta que la persona elija la opción de finalizar. Cada actividad tendrá un consumo de CO₂ diferente y se deberán registrar los datos que correspondan.
@@ -16,7 +16,7 @@ Finalizar actividades del día
 El programa debe validar que no se introduzcan valores negativos ni respuestas incorrectas. Si se introduce un valor no válido, se mostrará un mensaje de error y se volverá a pedir el dato.
 Al finalizar el registro de cada persona se mostrará el total de CO₂ emitido ese día. Al terminar con todas las personas se mostrará el total de CO₂ emitido por el grupo completo.
 
-##2.- Carrera popular 
+## 2.- Carrera popular 
 El Ayuntamiento de Erandio desea desarrollar una aplicación para gestionar la participación en una carrera popular.
 La aplicación funcionará de la siguiente manera:
 En primer lugar, se introducirá el DNI del participante. No será necesario introducir más información personal, ya que los datos de los participantes están registrados previamente en la base de datos del Ayuntamiento. 
@@ -32,7 +32,7 @@ El número de participantes que han participado anteriormente en más de 3 carre
 El tiempo medio realizado por todos los participantes. 
 El mejor tiempo registrado. 
 Importante: el programa deberá realizar todos los cálculos a partir de los datos introducidos por el usuario. No se podrán utilizar valores previamente calculados.
-##3.- Control de revisiones de bicicletas 
+## 3.- Control de revisiones de bicicletas 
 Una empresa de alquiler de bicicletas quiere llevar un control sobre las revisiones de las bicicletas de su flota.
 Primero se pedirá mediante consola la fecha actual, indicando día, mes y año.
 Después se introducirán los datos de varias bicicletas, una a una. Antes de pasar a registrar una nueva bicicleta, se preguntará:
@@ -51,7 +51,7 @@ Bicicletas que necesitan revisión: seguido del número correspondiente.
 Bicicletas que no necesitan revisión: seguido del número correspondiente.
  
 
-##4.- Cine
+## 4.- Cine
 Realizar un programa que registre la venta de entradas de un cine durante una sesión.
 El programa preguntará cuántos clientes se van a registrar.
 Para cada cliente se introducirá el número de entradas de adulto y el número de entradas infantiles que compra.
@@ -82,7 +82,7 @@ El usuario que realizó más minutos de ejercicio.
 El número total de minutos realizados entre todos los usuarios.
 El número total de días de entrenamiento registrados.
 
-##6.- Videojuego
+## 6.- Videojuego
 Realizar un programa que registre las partidas jugadas por varios jugadores de un videojuego.
 El programa preguntará cuántos jugadores se van a registrar.
 Para cada jugador se introducirá el número de partidas que ha jugado. Para cada partida se introducirá:
@@ -103,7 +103,7 @@ La puntuación total conseguida entre todos los jugadores.
 El número total de enemigos derrotados.
 
 
-##EXTRAS (Opcionales)
+## EXTRAS (Opcionales)
 
 El servicio de PRL del Centro nos pide realizar un programa que nos indique:
 Cuántos alumnos no han sido vacunados o no tienen la pauta completa (2 vacunas o 1 en caso de haber pasado la COVID-19)
@@ -120,6 +120,7 @@ Introduce un número: 5
 
 Realizar un programa que, dado el número de filas, muestre una pirámide de asteriscos.
 Introduzca el número de filas: 5
+```
 
     *
    ***
@@ -135,6 +136,7 @@ Ayuda: se necesitan ciclos independientes para producir los caracteres especiale
 *********
 
 Intentar realizar alguna de estas variantes:
+'
     *
    **
   ***
@@ -165,5 +167,6 @@ Intentar realizar alguna de estas variantes:
   *   *
    * *
     *
+  ```
 
 
