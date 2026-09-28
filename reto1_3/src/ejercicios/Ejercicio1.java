@@ -95,7 +95,7 @@ public class Ejercicio1 {
 					plancha = sc.nextBoolean();
 					while(plancha != true && plancha != false) {
 						System.out.println("Respuesta incorrecta. Introduce true para SI o false para NO");
-						plancha = sc.nextInt();
+						plancha = sc.nextBoolean();
 					}
 					if (plancha == true) {
 						System.out.println("Introduce cuantas horas la has usado");
