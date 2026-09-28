@@ -22,6 +22,13 @@ El programa debe validar que no se introduzcan valores negativos ni respuestas i
 
 Al finalizar el registro de cada persona se mostrará el total de CO₂ emitido ese día. Al terminar con todas las personas se mostrará el total de CO₂ emitido por el grupo completo.
 
+**Importante:** tener en cuenta la parte de Sostenibilidad.
+
+>Añade 2 cálculos más al cálculo de la huella de carbono y analizando los resultados, indica cual es la actividad que má contribuye.
+
+
+>Analizando el gasto diario del grupo estiman donde tienen un mayor margen de mejora.
+
 ## 2. Carrera popular 
 
 El Ayuntamiento de Erandio desea desarrollar una aplicación para gestionar la participación en una carrera popular.
