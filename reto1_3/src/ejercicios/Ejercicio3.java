@@ -1,10 +1,11 @@
 package ejercicios;
 import java.util.Scanner;
 public class Ejercicio3 {
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner sc = new Scanner(System.in);
-		int fechaOg=0, numBici = 0, fechaNew=0, revisionSi=0, revisionNo=0;
+		int fechaOg=0, fechaNew=0, revisionSi=0, revisionNo=0;
 		double dia, mes, year;
 		boolean otra=true;
 		char respuesta;
@@ -150,7 +151,7 @@ public class Ejercicio3 {
 		
 		System.out.println("Bicicletas que necesitan revisión: "+revisionSi);
 		System.out.println("Bicicletas que no necesitan revisión: "+revisionNo);
-		
+		sc.close();
 		
 		
 		
