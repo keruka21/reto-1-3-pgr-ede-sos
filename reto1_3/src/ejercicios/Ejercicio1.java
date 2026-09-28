@@ -6,9 +6,9 @@ public class Ejercicio1 {
 
 	public static void main(String[] args) {
 		//variables
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int usernum, option;
-		double coche, bus, bici, movil, ordenador, planchaHoras, co2Usuario=0, co2Grupo=0;
+		double coche, bus, bici, movil, ordenador, moto, lancha, planchaHoras, co2Usuario=0, co2Grupo=0;
 		boolean plancha;
 		String username;
 		
@@ -30,7 +30,9 @@ public class Ejercicio1 {
 				System.out.println("4.¿Has usado la plancha hoy?¿Cuantas horas?");
 				System.out.println("5.¿Cuantas horas has usado el ordenador hoy?");
 				System.out.println("6.¿Cuantas horas utilizaste el móvil hoy?");
-				System.out.println("7. Finalizar actividades del dia");
+				System.out.println("7.¿Cuantos kilómetros has recorridos en moto hoy?");
+				System.out.println("8.¿Cuantos kilómetros has recorridos en lancha hoy?");
+				System.out.println("9. Finalizar actividades del dia");
 				
 				option = sc.nextInt();
 				switch (option) { 
@@ -77,17 +79,43 @@ public class Ejercicio1 {
 					co2Usuario += (movil * 0.02);
 					break;
 				case 7:
-					System.out.println("El usuario:" +username+ " ha consumido un total de " +(co2Usuario)+ "kg de C02 hoy."); //tiene que ser la suma, cambiar
+					System.out.println("¿Cuantos kilómetros has recorridos en moto hoy?");
+					moto = sc.nextDouble();
+					while(moto < 0) {
+						System.out.println("El numero no puede ser negativo, porfavor introduce otro numero");
+						moto = sc.nextDouble();
+					}
+					co2Usuario += (moto * 0.9);
+					break;
+				case 8:
+					System.out.println("¿Cuantos kilómetros has recorridos en lancha hoy?");
+					lancha = sc.nextDouble();
+					while(lancha < 0) {
+						System.out.println("El numero no puede ser negativo, porfavor introduce otro numero");
+						lancha = sc.nextDouble();
+					}
+					co2Usuario += (lancha * 0.5);
+					break;
+				case 9:
+					System.out.println("El usuario:" +username+ " ha consumido un total de " +(co2Usuario)+ "kg de C02 hoy.");
+					/*
+					 * FALTA indica cual es la actividad que más contribuye.
+					*/
 					System.out.println("Por favor, introduce tu nombre de usuario:");
 					username = sc.next();
 					System.out.println("Vamos a calcular tu consumo diario de C02 " +username);
 					break;
 				default:
-					System.out.println("Por fdavor introduce una opción válida");
+					System.out.println("Por favor introduce una opción válida");
 				}
 			System.out.println("El consumo total de tu grupo de usuarios es de: " + co2Grupo );
+			
+			
+			/*
+			 * FALTA Analizando el gasto diario del grupo estimando donde tienen un mayor margen de mejora.
+			*/
 	
-			}while(option!=7);
+			}while(option!=9);
 		}
 		
 		sc.close();
