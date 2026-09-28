@@ -19,17 +19,40 @@ public class Ejercicio6 {
 		System.out.println("¿Cuántos jugadores se van a registrar.?");
 		usernum = sc.nextInt();
 		
+		while (usernum <= 0){
+			System.out.println("Error, no se pueden registrar 0 o menos de 0 jugadores");
+			System.out.println("¿Cuántos jugadores se van a registrar.?");
+			usernum = sc.nextInt();
+			
+		}
+		
 		for(int i=1; i<=usernum; i++){
 			playerpoints=0;
 			playerenemies=0;
 			System.out.println("Número de partidas que ha jugado el Usuario " +i+ " : ");
 			playsNum = sc.nextInt();
+			while (playsNum < 0) {
+				System.out.println("Error, un jugador no se puede introducir un numero negativo, introduce el numero denuevo");
+				System.out.println("Número de partidas que ha jugado el Usuario " +i+ " : ");
+				playsNum = sc.nextInt();
+			}
 			for(int j=1; j<=playsNum; j++){
 				System.out.println("Partida Nº" +j+ " : ");
 				System.out.println("Los puntos conseguidos:");
 				playpoints = sc.nextInt();
+				while (playpoints < 0) {
+					System.out.println("Error, no se puede sacar una puntuacion negativa, introduce otro numero");
+					System.out.println("Partida Nº" +j+ " : ");
+					System.out.println("Los puntos conseguidos:");
+					playpoints = sc.nextInt();
+				}
 				System.out.println("El número de enemigos derrotados.");
 				playenemies = sc.nextInt();
+				while (playenemies < 0) {
+					System.out.println("Error, no se puede derrotar a un numero de enemigos negativo, introduce otro numero");
+					System.out.println("El número de enemigos derrotados.");
+					playenemies = sc.nextInt();
+				}
 				playerpoints += playpoints;
 				playerenemies += playenemies;
 			}
