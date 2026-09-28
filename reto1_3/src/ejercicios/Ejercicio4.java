@@ -15,8 +15,8 @@ public class Ejercicio4 {
 			clientesRegistrar = teclado.nextInt();
 		}
 		
-		for(int i = 0; i < clientesRegistrar;i++) {
-			
+		for(int i = 1; i <= clientesRegistrar;i++) {
+			System.out.println("CLIENTE " + i);
 			System.out.println("Cuantas entradas de adultos quieres?");
 			entradasAdultos = teclado.nextInt();
 			while (entradasAdultos < 0){
@@ -73,7 +73,7 @@ public class Ejercicio4 {
 		System.out.println("El dinero total recaudado ha sido de " + totalRecaudado + " €");
 		System.out.println("El numero total de entradas de adulto ha sido " + totalAdultos);
 		System.out.println("El numero total de entradas infantiles ha sido " + totalInfantiles);
-		System.out.println("El cliente " + (maxCliente + 1) + "ha sido el cliente que mas entradas ha comprado con un total de " + maxEntradas + " entradas");
+		System.out.println("El cliente " + (maxCliente) + " ha sido el cliente que mas entradas ha comprado con un total de " + maxEntradas + " entradas");
 		teclado.close();
 		
 		
