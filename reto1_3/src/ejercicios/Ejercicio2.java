@@ -11,7 +11,7 @@ public class Ejercicio2 {
 		
 		String dni;
 		
-		boolean carreraIndv, masPart;
+		boolean masPart;
 		
 		int numCarPop, minsCar, secsCar, numPart = 0, numMenos60 = 0,
 			numCarMas3 = 0, mejTiempoMins = 0, mejTiempoSecs = 0, tiempoMed = 0;
@@ -23,7 +23,7 @@ public class Ejercicio2 {
 			
 			dni = sc.next();
 			
-			while (dni.length() !> 9)
+			while (dni.length() != 9)
 			{
 				System.out.println("Error!! El DNI no puede ser 9 caracteres de largo" );
 				System.out.print("Introduce el DNI del participante: ");
@@ -35,7 +35,7 @@ public class Ejercicio2 {
 			System.out.println("Participa en solitario o en pareja?" );
 			System.out.println("Escriba FALSE o TRUE, respectivamente:");
 			
-			carreraIndv = sc.nextBoolean();
+			masPart = sc.nextBoolean();
 			
 			System.out.println("En cuantas carreras populares ha participado?");
 			
@@ -89,17 +89,19 @@ public class Ejercicio2 {
 			
 			masPart = sc.nextBoolean();
 			
-			System.out.println("Número de participantes total: " + numPart);
-			
-			System.out.println("Número de participantes que ha llegado a la meta en menos de 60 minutos: " + numMenos60);
-			
-			System.out.println("Número de participantes que ha participado en más de 3 carreras: " + numCarMas3);
-			
-			System.out.println("Tiempo medio de todos los corredores: " + (tiempoMed / numPart ));
-			
-			System.out.println("Mejor tiempo de la carrera: " + mejTiempoMins + " minutos y " + mejTiempoSecs + " segundos.");
-			
 		} while (masPart == true);
+		
+		System.out.println("Número de participantes total: " + numPart);
+		
+		System.out.println("Número de participantes que ha llegado a la meta en menos de 60 minutos: " + numMenos60);
+		
+		System.out.println("Número de participantes que ha participado en más de 3 carreras: " + numCarMas3);
+		
+		System.out.println("Tiempo medio de todos los corredores: " + (tiempoMed / numPart ));
+		
+		System.out.println("Mejor tiempo de la carrera: " + mejTiempoMins + " minutos y " + mejTiempoSecs + " segundos.");
+		
+		
 		sc.close();
 		
 		
