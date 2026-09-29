@@ -7,32 +7,32 @@ public class Ejercicio6 {
 	public static void main(String[] args) {
 		//VARIABLES
 		Scanner sc = new Scanner(System.in);
-		int usernum, playsNum; //nº de jugadores y nº de partidas
-		int playpoints, playenemies; //puntos x partida, enemigos x partida
-		int playerpoints=0, playerenemies=0; //puntos/enemigos totales de un jugador
-		int totalpoints=0, totalenemies=0;//total puntos de los jugadors
-		int maxpoints = 0, playermax = 0; //maximo puntos, jugador con más puntos
+		int userNum, playsNum; //nº de jugadores y nº de partidas
+		int playpoints, playenemies, playerenemies=0; //puntos x partida, enemigos x partida y jugador
+		double playerpoints=0, totalpoints=0,  maxpoints = 0;//double porque luego hay que hacer la media
+		int totalenemies=0; //enemigos en total
+		int playermax = 0, bonusCount =0;//jugador con más puntos y cuantos bonus
 		
-		String bonus;
-		
-		System.out.println("Realizar un programa que registre las partidas jugadas por varios jugadores de un videojuego.");
+		System.out.println("Registro de partidas");
+		System.out.println("=========================");
 		System.out.println("¿Cuántos jugadores se van a registrar.?");
-		usernum = sc.nextInt();
+		userNum = sc.nextInt();
 		
-		while (usernum <= 0){
+		while (userNum <= 0){
 			System.out.println("Error, no se pueden registrar 0 o menos de 0 jugadores");
-			System.out.println("¿Cuántos jugadores se van a registrar.?");
-			usernum = sc.nextInt();
-			
+			System.out.println("¿Cuántos jugadores se van a registrar?");
+			userNum = sc.nextInt();
 		}
 		
-		for(int i=1; i<=usernum; i++){
+		for(int i=1; i<=userNum; i++){
 			playerpoints=0;
 			playerenemies=0;
+			bonusCount = 0;
+			
 			System.out.println("Número de partidas que ha jugado el Usuario " +i+ " : ");
 			playsNum = sc.nextInt();
 			while (playsNum < 0) {
-				System.out.println("Error, un jugador no se puede introducir un numero negativo, introduce el numero denuevo");
+				System.out.println("Error, no puede introducir un numero negativo.");
 				System.out.println("Número de partidas que ha jugado el Usuario " +i+ " : ");
 				playsNum = sc.nextInt();
 			}
@@ -40,34 +40,40 @@ public class Ejercicio6 {
 				System.out.println("Partida Nº" +j+ " : ");
 				System.out.println("Los puntos conseguidos:");
 				playpoints = sc.nextInt();
-				while (playpoints < 0) {
-					System.out.println("Error, no se puede sacar una puntuacion negativa, introduce otro numero");
-					System.out.println("Partida Nº" +j+ " : ");
+				
+				while (playpoints < 0) { 
+					System.out.println("Error, no se puede tener una puntuación negativa.");
 					System.out.println("Los puntos conseguidos:");
 					playpoints = sc.nextInt();
 				}
 				System.out.println("El número de enemigos derrotados.");
 				playenemies = sc.nextInt();
+				
 				while (playenemies < 0) {
-					System.out.println("Error, no se puede derrotar a un numero de enemigos negativo, introduce otro numero");
+					System.out.println("Error, no se puede derrotar a un numero de enemigos negativo.");
 					System.out.println("El número de enemigos derrotados.");
 					playenemies = sc.nextInt();
 				}
+				
+				if (playpoints > 1000) {
+				    playerpoints += 100;
+				    bonusCount++; 
+				}
+
 				playerpoints += playpoints;
 				playerenemies += playenemies;
 			}
-			if(totalpoints>=1000) {
-				bonus = "SI, +100 puntos";
-				playerpoints += 100;
-			}else {
-				bonus ="NO";
-			}
 			
-			System.out.println("___________________________\n");
-			System.out.println("Bonus: " +bonus);
+			System.out.println("=========================");
 			System.out.println("La puntuación total obtenida del Usuario " +i+ " es: " +playerpoints);
 			System.out.println("El número total de enemigos derrotados del Usuario " +i+ " es: " +playerenemies);
-			System.out.println("La puntuación media por partida es: " +(playerpoints/playsNum));
+			System.out.println("Bonus: " +bonusCount+ "bonus en total. Puntos bonus: " +(bonusCount*100));
+			if (playsNum > 0) {
+				System.out.println("La puntuación media por partida es: " + (playerpoints / playsNum));
+			} else {
+				System.out.println("La puntuación media por partida es: 0");
+			}
+			
 			totalpoints +=playerpoints;
 			totalenemies +=playerenemies;
 			if (playerpoints > maxpoints) {
@@ -75,7 +81,7 @@ public class Ejercicio6 {
                 playermax = i;
             }
 		}
-		System.out.println("___________________________\n");
+		System.out.println("=========================");
 		System.out.println("El jugador con mayor puntuación es el Usuario " +playermax+ " con: " +maxpoints+ " puntos.");
 		System.out.println("La puntuación total conseguida entre todos los jugadores: "  +totalpoints+ " puntos.");
 		System.out.println("El número total de enemigos derrotados: " +totalenemies+ " enemigos.");
