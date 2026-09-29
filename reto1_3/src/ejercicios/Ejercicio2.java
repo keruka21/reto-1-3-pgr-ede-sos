@@ -61,10 +61,10 @@ public class Ejercicio2 {
 			
 			if (minsCar >= 60)
 			{
-				numMenos60++;
 				System.out.println("No conseguido terminar la carrera en menos de 60 minutos...");
 			}
 			else {
+				numMenos60++;
 				System.out.println("Ha conseguido terminar la carrera en menos de 60 minutos!!");
 			}
 			
@@ -85,7 +85,7 @@ public class Ejercicio2 {
 			}
 			
 			System.out.println("Quieres registrar más participantes?");
-			System.out.println("Escriba FALSE o TRUE:");
+			System.out.println("Escriba FALSE para NO o TRUE para SI:");
 			
 			masPart = sc.nextBoolean();
 			
