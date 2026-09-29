@@ -1,159 +1,135 @@
 package ejercicios;
+
 import java.util.Scanner;
+
 public class Ejercicio3 {
 	
 	public static void main(String[] args) {
-		
+		//VARIABLES
 		Scanner sc = new Scanner(System.in);
-		int fechaOg=0, fechaNew=0, revisionSi=0, revisionNo=0;
-		double dia, mes, year;
-		boolean otra=true;
-		char respuesta;
+		int dateAct=0, dateLast=0, revisionY=0, revisionN=0;  //fecha actual, fecha ultima revision, rev si, rev no
+		int day, month, year;
+		boolean option=true;
+		char answ; //respuesta S/N
 		
-		System.out.println("Introduzca la fecha");
-	
+		//fecha actual
+		System.out.println("Por favor, introduzca la fecha actual:");
 		
 		do {
-			
-			System.out.print(" · Número del día: ");
-			dia = sc.nextDouble();
-			fechaOg += dia;
-			if (dia==0) {
-				System.out.println("¡ERROR! El número no puede ser 0");
-			}if (dia<0) {
-				System.out.println("¡ERROR! El número no puede ser negativo");
-			}if (dia>31) {
-				System.out.println("¡ERROR! El número no puede ser mayor que 31");
-			}if (dia%1!=0) {
-				System.out.println("¡ERROR! El número no puede tener decimales");
+			System.out.print("Número del día: ");
+			day= sc.nextInt();
+			if (day==0) {
+				System.out.println("¡ERROR! El número no puede ser 0.");
+			}if (day<0) {
+				System.out.println("¡ERROR! El número no puede ser negativo.");
+			}if (day>31) {
+				System.out.println("¡ERROR! El número no puede ser mayor que 31.");
 			}
 			
-		} while (dia<=0 || dia>31 || dia%1!=0);
+		} while (day<=0 || day>31);
 		
 		do {
-			
-			System.out.print(" · Número del mes: ");
-			mes = sc.nextDouble();
-			fechaOg += mes*30;
-			if (mes==0) {
-				System.out.println("¡ERROR! El número no puede ser 0");
-			}if (mes<0) {
-				System.out.println("¡ERROR! El número no puede ser negativo");
-			}if (mes>12) {
-				System.out.println("¡ERROR! El número no puede ser mayor que 12");
-			}if (mes%1!=0) {
-				System.out.println("¡ERROR! El número no puede tener decimales");
+			System.out.print("Número del mes: ");
+			month = sc.nextInt();
+			if (month==0) {
+				System.out.println("¡ERROR! El número no puede ser 0.");
+			}if (month<0) {
+				System.out.println("¡ERROR! El número no puede ser negativo.");
+			}if (month>12) {
+				System.out.println("¡ERROR! El número no puede ser mayor que 12.");
 			}
-			
-		} while (mes<=0 || mes>12 || mes%1!=0);
+		} while (month<=0 || month>12);
 		
 		
 		do {
-			
-			System.out.print(" · Número del año: ");
-			year = sc.nextDouble();
-			fechaOg += year*365;
+			System.out.print("Número del año: ");
+			year = sc.nextInt();
 			if (year==0) {
-				System.out.println("¡ERROR! El número no puede ser 0");
+				System.out.println("¡ERROR! El número no puede ser 0.");
 			}if (year<0) {
-				System.out.println("¡ERROR! El número no puede ser negativo");
-			}if (year%1!=0) {
-				System.out.println("¡ERROR! El número no puede tener decimales");
+				System.out.println("¡ERROR! El número no puede ser negativo.");
 			}
-			
-		} while (year<=0 || mes%1!=0);
+		} while (year<=0);
 		
-		do  {
+		dateAct = day + (month * 30) + (year * 365); //pasamos todo a dias
+		
+		//ID
+		do {
 			System.out.print("Inserte el número de identificación de la bicicleta: ");
-			sc.nextDouble();
+			sc.nextInt();
+			
 			System.out.println("Inserte la fecha de la última revisión de la bicicleta: ");
-			
+			//fecha ult. revision
 			do {
-				
-				System.out.print(" · Número del día: ");
-				dia = sc.nextDouble();
-				fechaNew += dia;
-				if (dia==0) {
+				System.out.print("Número del día: ");
+				day = sc.nextInt();
+				if (day==0) {
 					System.out.println("¡ERROR! El número no puede ser 0");
-				}if (dia<0) {
+				}if (day<0) {
 					System.out.println("¡ERROR! El número no puede ser negativo");
-				}if (dia>31) {
+				}if (day>31) {
 					System.out.println("¡ERROR! El número no puede ser mayor que 31");
-				}if (dia%1!=0) {
-					System.out.println("¡ERROR! El número no puede tener decimales");
 				}
-				
-			} while (dia<=0 || dia>31 || dia%1!=0);
+			} while (day<=0 || day>31);
+			
 			
 			do {
-				
-				System.out.print(" · Número del mes: ");
-				mes = sc.nextDouble();
-				fechaNew += mes*30;
-				if (mes==0) {
+				System.out.print("Número del mes: ");
+				month = sc.nextInt();
+				if (month==0) {
 					System.out.println("¡ERROR! El número no puede ser 0");
-				}if (mes<0) {
+				}if (month<0) {
 					System.out.println("¡ERROR! El número no puede ser negativo");
-				}if (mes>12) {
+				}if (month>12) {
 					System.out.println("¡ERROR! El número no puede ser mayor que 12");
-				}if (mes%1!=0) {
-					System.out.println("¡ERROR! El número no puede tener decimales");
 				}
-				
-			} while (mes<=0 || mes>12 || mes%1!=0);
+			} while (month<=0 || month>12);
 			
 			
 			do {
-				
-				System.out.print(" · Número del año: ");
-				year = sc.nextDouble();
-				fechaNew += year*365;
+				System.out.print("Número del año: ");
+				year = sc.nextInt();
 				if (year==0) {
 					System.out.println("¡ERROR! El número no puede ser 0");
 				}if (year<0) {
 					System.out.println("¡ERROR! El número no puede ser negativo");
-				}if (year%1!=0) {
-					System.out.println("¡ERROR! El número no puede tener decimales");
 				}
-				
-			} while (year<=0 || mes%1!=0);
+			} while (year<=0);
 			
-			if (fechaNew-fechaOg>=365){
-				System.out.println("Esta bicicleta necesita revisión");
-				revisionSi+=1;
+			
+			dateLast = day + (month * 30) + (year * 365); //pasamos todo a dias
+			
+			
+			if (dateAct - dateLast>=365){
+				System.out.println("Esta bicicleta necesita revisión.");
+				revisionY+=1;
 				
 			}else {
-				System.out.println("Esta bicicleta no necesita revisión");
-				revisionNo+=1;
+				System.out.println("Esta bicicleta no necesita revisión.");
+				revisionN+=1;
 			}
-			
-			
-			
+		
 			do {
+				System.out.print("¿Quiere registrar otra bicicleta? Conteste S (si) o N (no): ");
+				answ = sc.next().toUpperCase().charAt(0);
 				
-				System.out.print("¿Quiere registrar otra bicicleta? Conteste S o N: ");
-				respuesta = sc.next().toUpperCase().charAt(0);
-				
-				switch (respuesta) {
+				switch (answ) {
 				case 'S':
-					otra=true;
+					option=true;
 					break;
 				case 'N':
-					otra=false;
+					option=false;
 					break;
 				default:
 					System.out.println("¡Error! Por favor, conteste S o N");
 				}
 				
-			}while(respuesta != 'S' && respuesta != 'N');
+			}while(answ != 'S' && answ != 'N');
 			
-		}while (otra==true);
+		}while (option==true);
 		
-		System.out.println("Bicicletas que necesitan revisión: "+revisionSi);
-		System.out.println("Bicicletas que no necesitan revisión: "+revisionNo);
-		sc.close();
-		
-		
-		
-}
+		System.out.println("Bicicletas que necesitan revisión: " +revisionY);
+		System.out.println("Bicicletas que no necesitan revisión: " +revisionN);
+		sc.close();	
+	}
 }
