@@ -21,17 +21,17 @@ public class Ejercicio5 {
 	     
 		System.out.println("Registro de actividad semanal");
 		System.out.println("---------------------------------------------");
-		//El programa preguntará cuántos usuarios se van a registrar.
+
 		System.out.println("¿Cuantos usuarios se van a registrar?");
 		usernum = sc.nextInt();
-		//validación nº usuarios
+		
 		while (usernum <= 0) {
             System.out.println("Error: El número de usuarios debe ser mayor que 0");
             System.out.println("Por favor, introduce cuantos usuarios se van a registrar: ");
             usernum = sc.nextInt();
         }
 		
-		//bucle registro de cada usuario
+		
 		for(int i=1; i<=usernum; i++) {
 			mintotal = 0;
 	        min60 = 0;
@@ -65,14 +65,16 @@ public class Ejercicio5 {
 			System.out.println("El número total de minutos realizados durante la semana:" +mintotal); //total minutos
 			System.out.println("La media de minutos por día de asistencia:" +(mintotal/diasNum)); //media semanal
 			System.out.println("El número de días en los que ha realizado más de 60 minutos de ejercicio:" +min60);
-			System.out.println("--------------------------------");	
+			System.out.println("--------------------------------");
+			
 			if(mintotal >300) {
-				System.out.println("¡FELICIDADES! Has superado el objetivo semanal en: " +(mintotal-300)+ " minutos para superar el objetivo semanal.");
+				System.out.println("¡FELICIDADES! Has superado el objetivo semanal en: " +(mintotal-300)+ " minutos.");
 
 			}else {
 				System.out.println("¡VAYA! :-( No has superado el objetivo semanal, te faltan " +(300 - mintotal)+ " minutos.");
 			}
 			mintotalgrupo += mintotal; //minutos totales de ejercicio
+			
 			if (mintotal > maxMinutos) { //si los minutos totales de usuario son mayores que el maximo de minutos registrados
                 maxMinutos = mintotal; //max minutos registrados es el num max de minutos del usuario
                 usuarioMax = i; //numero maximo de ejercicio es igual al usuario i
@@ -88,7 +90,7 @@ public class Ejercicio5 {
                 + mintotalgrupo + " minutos.");
         System.out.println("El número total de días de entrenamiento registrados es de: "
                 + totalDias + " días.");
-		//cerramos scanner			
+				
 		sc.close();
 	}
 }
