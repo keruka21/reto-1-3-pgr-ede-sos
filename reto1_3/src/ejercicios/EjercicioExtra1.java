@@ -1,10 +1,4 @@
 package ejercicios;
-/*
- El servicio de PRL del Centro nos pide realizar un programa que nos indique:
-Cuántos alumnos no han sido vacunados o no tienen la pauta completa (2 vacunas o 1 en caso de haber pasado la COVID-19)
-Y de aquellos que sí y han sido vacunados (con dos dosis o 1, si hubieran padecido la COVID) hasta cuándo están protegidos (6 meses más del mes de la vacuna)
-El proceso se realizará tantas veces como alumnos/as haya.
- */
 
 import java.util.Scanner;
 
@@ -12,22 +6,16 @@ public class EjercicioExtra1 {
 
     public static void main(String[] args) {
 
-        //VARIABLES
         Scanner sc = new Scanner(System.in);
 
-        int numAlumn;
-        int covid;
-        int vacuna;
-        int numvacuna;
-        int novacuna = 0;
-        int mesvacuna;
-        int mesproteccion;
+        int numAlumn, covid, vacuna, numvacuna, novacuna = 0,
+        	mesvacuna, mesproteccion;
         String nombreMes;
 
         System.out.println("VACUNACIONES");
         System.out.println("Introduce el nº de alumnos:");
         numAlumn = sc.nextInt();
-        //bucle termina cuando se rgistren todos los alumnos
+
         for (int i = 1; i <= numAlumn; i++) {
 
         	System.out.println("________________________________");
