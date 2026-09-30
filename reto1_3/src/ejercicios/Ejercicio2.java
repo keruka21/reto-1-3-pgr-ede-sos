@@ -10,8 +10,9 @@ public class Ejercicio2 {
 		Scanner sc = new Scanner(System.in);
 		String dni;
 		boolean masPart;
-		int numCarPop, minsCar, secsCar, numPart = 0, totalTime = 0, numMenos60 = 0,
-				numCarMas3 = 0, mejTiempoTotal = 0, tiempoMed = 0, secsPromedio = 0;
+		int numCarPop, minsCar, secsCar, numPart = 0, totalTime = 0, numMenos60 = 0, numMenos45 = 0,
+				numCarMas3 = 0, numCarMas5 = 0, mejTiempoTotal = 0, tiempoMed = 0, secsPromedio = 0;
+		double porcentaje60 = 0;
 			
 		do {
 			numPart++;
@@ -40,8 +41,10 @@ public class Ejercicio2 {
 				
 			if (numCarPop > 3) {
 				numCarMas3++;
-			}
-				
+			}if(numCarPop > 5){
+				numCarMas5++;
+			}	
+			
 			System.out.println("Introduce cuántos minutos esta persona ha durado en la carrera:");
 			minsCar = sc.nextInt();
 				
@@ -71,6 +74,16 @@ public class Ejercicio2 {
 			} else {
 				System.out.println("No ha conseguido terminar la carrera en menos de 60 minutos...");
 			}
+			
+			porcentaje60 = (numMenos60 * 100)/numPart;
+ 
+			//menos de 45
+			if (totalTime < 2600) {
+				numMenos45++;
+				System.out.println("Ha conseguido terminar la carrera en menos de 45 minutos!!");
+			} else {
+				System.out.println("No ha conseguido terminar la carrera en menos de 45 minutos...");
+			}
 
 			// Mejor tiempo
 			if (mejTiempoTotal == 0 || totalTime < mejTiempoTotal) {
@@ -86,7 +99,10 @@ public class Ejercicio2 {
 		
 		System.out.println("Número de participantes total: " + numPart);
 		System.out.println("Número de participantes que ha llegado a la meta en menos de 60 minutos: " + numMenos60);
+		System.out.println("Porcentaje de participantes que ha llegado a la meta en menos de 60 minutos: " + (porcentaje60));
+		System.out.println("Número de participantes que ha llegado a la meta en menos de 45 minutos: " + numMenos45);
 		System.out.println("Número de participantes que ha participado en más de 3 carreras: " + numCarMas3);
+		System.out.println("Número de participantes que ha participado en más de 5 carreras: " + numCarMas5);
 			
 		secsPromedio = tiempoMed / numPart;
 		
