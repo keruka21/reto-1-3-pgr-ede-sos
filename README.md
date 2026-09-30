@@ -27,7 +27,7 @@ Al finalizar el registro de cada persona se mostrará el total de CO₂ emitido 
 >Añade 2 cálculos más al cálculo de la huella de carbono y analizando los resultados, indica cual es la actividad que más contribuye.
 
 
->Analizando el gasto diario del grupo estiman donde tienen un mayor margen de mejora.
+>Analizando el gasto diario del grupo estima donde tienen un mayor margen de mejora.
 
 ## 2. Carrera popular 
 
