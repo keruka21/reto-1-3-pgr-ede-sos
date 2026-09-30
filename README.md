@@ -132,9 +132,9 @@ Si un usuario realiza más de 300 minutos en total, el programa debe mostrar que
 
 Al finalizar todos los usuarios, el programa debe mostrar:
 
--El usuario que realizó más minutos de ejercicio.
--El número total de minutos realizados entre todos los usuarios.
--El número total de días de entrenamiento registrados.
+- El usuario que realizó más minutos de ejercicio.
+- El número total de minutos realizados entre todos los usuarios.
+- El número total de días de entrenamiento registrados.
 
 ## 6.- Videojuego
 Realizar un programa que registre las partidas jugadas por varios jugadores de un videojuego.
